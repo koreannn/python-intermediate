@@ -39,24 +39,20 @@ m = [15, 20, 25]
 print(l, id(l))
 print(m, id(m))
 
-l = l * 2
-m = m * 2
+l = l * 2 # __mul__
+m = m * 2 # __mul__
 
 print(l, id(l))
 print(m, id(m))
 
-l *= 2
-m *= 2
+l *= 2 # __imul__이 없으므로, __mul__이 대신 호출됨
+m *= 2 # __imul__이 있으므로, __imul__이 수행됨(__mul__과 달리 원본을 직접 수정)
 
 print(l, id(l))
 print(m, id(m))
 
 print()
 print()
-
-"""
-튜플은 불변형이므로, 뭔가 변경하려는 작업을 할 수는 있지만, 계속 새로운 할당을 통해 작업이 이루어지는 것이다.
-"""
 
 
 """파이썬의 정렬 (sort, sorted = inplace, not inplace)"""
@@ -89,4 +85,4 @@ print()
 # List: 융통성, 범용적인 사용 (e.g. 다양한 자료형 지원 등)
 # Array: 수치 연산 및 벡터 연산 등 효율적인 사용 (e.g. 수치 연산 및 벡터 연산 등)
 # Array는 리스트와 호환성이 매우 높음(매서드 등이 거의 동일함)
-unpacking
+
