@@ -56,4 +56,3 @@ print()
 from unicodedata import name
 print(chr(i) for i in range(0, 256))
 print({name(chr(i), "") for i in range(0, 256)})
-
