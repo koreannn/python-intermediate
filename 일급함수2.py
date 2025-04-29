@@ -47,7 +47,7 @@ print()
 # Ex3-2.
 c=30
 def func4(a):
-    global c
+    global c # 함수 내에서 global 키워드 쓰는거 좋은 코딩은 아님
     print(a)
     print(c)
     c=40
